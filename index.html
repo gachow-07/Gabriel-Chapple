@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name</title>
-  <meta name="description" content="Personal website of Your Name.">
+  <title>Gabe Chapple | Economics at Cal Poly</title>
+  <meta name="description" content="Gabe Chapple, economics student at Cal Poly San Luis Obispo. Experience, leadership, skills and contact.">
 
   <!-- Fonts: Unbounded (headings) and Manrope (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,11 +18,19 @@
   <!-- ===== Navbar ===== -->
   <header class="nav-wrap">
     <nav class="nav">
-      <a class="nav-name" href="#top">Your Name</a>
+      <a class="nav-name" href="#top">Gabe Chapple</a>
 
-      <!-- Add nav links here, e.g.
-           <a href="#about">About</a> -->
-      <div class="nav-links"></div>
+      <!-- Menu button, only shown on small screens -->
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+
+      <!-- Add nav links here. The href must match a section id. -->
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
   </header>
 
@@ -32,19 +40,200 @@
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-content">
-          <h1 class="hero-heading">Your Name</h1>
-          <p class="hero-text">A short line about who you are goes here.</p>
+          <h1 class="hero-heading">Gabe Chapple</h1>
+          <p class="hero-text">Economics student at Cal Poly San Luis Obispo with a background in guest operations, team leadership and community service.</p>
           <div class="hero-buttons">
-            <a class="btn btn-primary" href="#">Primary button</a>
-            <a class="btn btn-secondary" href="#">Secondary button</a>
+            <a class="btn btn-primary" href="#contact">Get in touch</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/gabechapple" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
 
-        <!-- Hero photo: put your image in /assets, then replace the
-             span below with:
-             <img src="assets/your-photo.jpg" alt="Photo of Your Name"> -->
+        <!-- Hero photo: to change it, put a new image in /assets
+             and update the src below. -->
         <div class="hero-photo">
-          <span class="hero-photo-placeholder">Photo</span>
+          <img src="assets/gabe-chapple.jpg" alt="Headshot of Gabe Chapple" width="1060" height="1484">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="section-label">About</p>
+        <h2 class="section-heading">Economics at Cal Poly, from Seattle.</h2>
+
+        <div class="about">
+          <p class="about-text">I'm studying economics at Cal Poly San Luis Obispo. Most of my experience so far comes from working with people: checking in guests at a busy Seattle terminal, leading a Scout patrol, and captaining my lacrosse and football teams. Right now I'm building on that with case practice in the Cal Poly Consulting Club.</p>
+
+          <ul class="facts">
+            <li>
+              <span class="facts-label">Education</span>
+              B.S. in Economics, Cal Poly San Luis Obispo
+              <span class="meta">Expected 2029</span>
+            </li>
+            <li>
+              <span class="facts-label">High school</span>
+              Lincoln High School, Seattle, WA
+              <span class="meta">2021 to 2025</span>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="stats">
+          <li><span class="stat-number">14,000</span> guests a day at the terminal where I work</li>
+          <li><span class="stat-number">$15,000</span> raised for the Queen Anne Food Bank</li>
+          <li><span class="stat-number">15</span> Scouts led as Patrol Leader</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <p class="section-label">Experience</p>
+        <h2 class="section-heading">Where I've worked.</h2>
+
+        <!-- Entry: copy an <article class="entry"> block to add a new role. -->
+        <article class="entry">
+          <div class="entry-meta">
+            <h3 class="entry-title">Concierge</h3>
+            <p class="entry-org">SMS International Shore Operations</p>
+            <p class="meta">Seattle, WA &middot; Since April 2024</p>
+          </div>
+          <ul class="entry-points">
+            <li>Welcome and check in guests at a high-volume terminal serving about 14,000 people a day, across four shifts a week.</li>
+            <li>Resolve guest concerns and answer questions so every arrival goes smoothly.</li>
+            <li>Coordinate transportation so guests arrive and depart on time.</li>
+            <li>Support reservations and bookings as guest needs change.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-meta">
+            <h3 class="entry-title">Volunteer Coordinator</h3>
+            <p class="entry-org">Boy Scouts of America</p>
+            <p class="meta">Volunteer</p>
+          </div>
+          <ul class="entry-points">
+            <li>Recruited and trained new volunteers on program goals.</li>
+            <li>Coordinated volunteer schedules and supported event operations.</li>
+            <li>Wrote volunteer training materials to get the program ready.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Leadership & Involvement ===== -->
+    <section class="section" id="leadership">
+      <div class="container">
+        <p class="section-label">Leadership &amp; Involvement</p>
+        <h2 class="section-heading">On teams and in the community.</h2>
+
+        <article class="entry">
+          <div class="entry-meta">
+            <h3 class="entry-title">Patrol Leader (Life Scout)</h3>
+            <p class="entry-org">Boy Scouts of America</p>
+          </div>
+          <ul class="entry-points">
+            <li>Led a patrol of 15 members and taught outdoor and survival skills, including knot tying.</li>
+            <li>Led the annual tree lot fundraiser, raising $15,000 for the Queen Anne Food Bank.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-meta">
+            <h3 class="entry-title">Team Captain</h3>
+            <p class="entry-org">Lacrosse and Football</p>
+          </div>
+          <ul class="entry-points">
+            <li>Served as captain of both the lacrosse and football teams.</li>
+            <li>Played goalie in lacrosse, running the defense and directing teammates into position.</li>
+            <li>Called out reads and plays on the football field to coordinate the team's response.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-meta">
+            <h3 class="entry-title">Member</h3>
+            <p class="entry-org">Cal Poly Consulting Club</p>
+            <p class="meta">Since 2026</p>
+          </div>
+          <ul class="entry-points">
+            <li>Attend weekly meetings and practice case studies to build consulting skills.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-meta">
+            <h3 class="entry-title">Anthropic Team Seat</h3>
+            <p class="entry-org">Cal Poly Vibe Coding</p>
+            <p class="meta">Since 2026</p>
+          </div>
+          <ul class="entry-points">
+            <li>Earned an Anthropic-sponsored seat for active participation and performance.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-meta">
+            <h3 class="entry-title">Member</h3>
+            <p class="entry-org">Kappa Sigma Fraternity, Nu-Alpha Chapter</p>
+            <p class="meta">Since 2025</p>
+          </div>
+          <ul class="entry-points">
+            <li>Take part in member recruitment, philanthropy events and IFC sports.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <p class="section-label">Skills</p>
+        <h2 class="section-heading">What I bring.</h2>
+
+        <div class="skills">
+          <div class="skill-group">
+            <h3 class="skill-title">Guest Service &amp; Operations</h3>
+            <ul>
+              <li>Guest check-in</li>
+              <li>Issue resolution</li>
+              <li>Transportation coordination</li>
+              <li>Reservations and bookings</li>
+              <li>High-volume operations</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-title">Leadership &amp; Teamwork</h3>
+            <ul>
+              <li>Team leadership</li>
+              <li>Volunteer training and recruitment</li>
+              <li>Event coordination</li>
+              <li>Fundraising</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-title">Analytical &amp; Technical</h3>
+            <ul>
+              <li>Case studies and business problem-solving</li>
+              <li>AI-assisted development with Claude</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <p class="section-label">Contact</p>
+        <h2 class="section-heading">Let's talk.</h2>
+        <p class="contact-text">The best way to reach me is by email. I'm also on LinkedIn.</p>
+        <a class="contact-email" href="mailto:gabe.chapple@gmail.com">gabe.chapple@gmail.com</a>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="mailto:gabe.chapple@gmail.com">Email me</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/gabechapple" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
     </section>
@@ -53,6 +242,7 @@
 
     <!-- Section template: copy this block, remove the comment
          markers, then change the id, label and heading.
+         Add a matching link in the navbar.
 
     <section class="section" id="section-id">
       <div class="container">
@@ -68,8 +258,9 @@
 
   <!-- ===== Footer ===== -->
   <footer class="footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Your Name</p>
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Gabe Chapple</p>
+      <a href="https://www.linkedin.com/in/gabechapple" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </footer>
 
