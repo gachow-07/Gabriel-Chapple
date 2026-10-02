@@ -1,0 +1,262 @@
+/* ==========================================================
+   Design tokens: change colors, fonts and spacing here.
+   ========================================================== */
+:root {
+  /* Colors */
+  --color-heading: #0D1D30;   /* navy */
+  --color-text: #3A4F68;
+  --color-accent: #4FB3A9;    /* teal, use sparingly */
+  --color-bg: #FFFFFF;
+  --color-border: #0D1D30;
+
+  /* Fonts */
+  --font-heading: "Unbounded", system-ui, sans-serif;
+  --font-body: "Manrope", system-ui, sans-serif;
+  --weight-heading: 500;
+  --weight-body: 400;
+  --weight-bold: 600;
+  --tracking-heading: -0.04em;
+
+  /* Spacing scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 8rem;
+
+  /* Layout */
+  --container-width: 1200px;
+  --gutter: 1.25rem;          /* side padding on small screens */
+  --nav-height: 64px;
+  --nav-top: 1rem;            /* gap between navbar and top of window */
+
+  /* Shape and depth */
+  --radius-pill: 999px;
+  --shadow-nav: 0 4px 24px rgba(13, 29, 48, 0.08);
+}
+
+/* ==========================================================
+   Base
+   ========================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + var(--nav-top) * 2);
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-weight: var(--weight-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--color-heading);
+  font-family: var(--font-heading);
+  font-weight: var(--weight-heading);
+  letter-spacing: var(--tracking-heading);
+  line-height: 1.05;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* ==========================================================
+   Navbar
+   ========================================================== */
+.nav-wrap {
+  position: sticky;
+  top: var(--nav-top);
+  z-index: 10;
+  padding: 0 var(--gutter);
+  margin-top: var(--nav-top);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  max-width: var(--container-width);
+  height: var(--nav-height);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  background: var(--color-bg);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-nav);
+}
+
+.nav-name {
+  color: var(--color-heading);
+  font-family: var(--font-heading);
+  font-weight: var(--weight-heading);
+  letter-spacing: var(--tracking-heading);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.nav-links a {
+  font-weight: var(--weight-bold);
+  font-size: 0.9375rem;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: var(--color-accent);
+}
+
+/* ==========================================================
+   Hero
+   ========================================================== */
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - var(--nav-height) - var(--nav-top) * 2);
+  min-height: calc(100svh - var(--nav-height) - var(--nav-top) * 2);
+  padding: var(--space-xl) 0;
+}
+
+.hero-heading {
+  font-size: clamp(3rem, 13vw, 11rem);
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+}
+
+.hero-text {
+  max-width: 36rem;
+  margin-top: var(--space-md);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+/* ==========================================================
+   Buttons (reusable)
+   Add new button styles here, e.g. .btn-small or .btn-accent
+   ========================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-weight: var(--weight-bold);
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--color-heading);
+  color: var(--color-bg);
+}
+
+.btn-primary:hover {
+  background: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.btn-secondary {
+  background: var(--color-bg);
+  color: var(--color-heading);
+}
+
+.btn-secondary:hover {
+  background: var(--color-heading);
+  color: var(--color-bg);
+}
+
+.btn:focus-visible,
+.nav a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* ==========================================================
+   Cards (reusable)
+   Add card styles here when you need them, e.g. .card
+   ========================================================== */
+
+/* ==========================================================
+   Sections (reusable template, see index.html)
+   ========================================================== */
+.section {
+  padding: var(--space-2xl) 0;
+}
+
+.section-label {
+  color: var(--color-accent);
+  font-weight: var(--weight-bold);
+  font-size: 0.8125rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  font-size: clamp(2rem, 6vw, 4rem);
+}
+
+/* ==========================================================
+   Footer
+   ========================================================== */
+.footer {
+  padding: var(--space-lg) 0;
+  font-size: 0.875rem;
+}
+
+/* ==========================================================
+   Larger screens
+   ========================================================== */
+@media (min-width: 768px) {
+  :root {
+    --gutter: 2.5rem;
+  }
+
+  .nav {
+    padding: 0 var(--space-lg);
+  }
+}
