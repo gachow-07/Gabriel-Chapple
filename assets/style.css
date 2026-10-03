@@ -122,6 +122,12 @@ h1 .period { color: var(--accent); }
   padding: 32px 0; border-top: 1px solid var(--line);
 }
 .entry-head { flex: 1 1 260px; }
+/* Logo or photo tile above an entry title (images live in assets/img/) */
+.entry-thumb {
+  display: block; width: 64px; height: 64px; margin-bottom: 20px;
+  border: 1px solid var(--line); border-radius: 12px;
+  background: #FFFFFF; object-fit: cover;
+}
 .entry-title {
   margin: 0; font-size: clamp(24px, 2.6vw, 32px); font-weight: 500;
   letter-spacing: -0.03em; line-height: 1.1;
