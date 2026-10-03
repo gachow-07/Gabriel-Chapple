@@ -148,7 +148,7 @@ h1 .period { color: var(--accent); }
 .entry-body { flex: 2 1 320px; margin: 0; display: grid; gap: 16px; max-width: 640px; }
 .entry-body dt { color: var(--muted); margin-bottom: 4px; }
 .entry-body dd { margin: 0; font-size: 16px; line-height: 1.5; }
-.entry-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+.entry-body dd.entry-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
 
 /* ---------- Footer ---------- */
 footer { margin-top: var(--section-gap); color: var(--muted); }
