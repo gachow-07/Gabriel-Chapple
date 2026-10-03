@@ -16,6 +16,8 @@
   --section-gap: clamp(72px, 10vw, 120px);
   --ease: cubic-bezier(.2, .7, .2, 1);
 }
+/* Dark theme: pages set data-theme="light" on <html>, so this stays off.
+   Remove that attribute to follow the visitor's system setting again. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0E0E0D; --ink: #EDEDEA; --muted: #9C9C96; --line: #2A2A28;
@@ -68,12 +70,12 @@ a:focus-visible, button:focus-visible { outline: 2px solid currentColor; outline
 .pill--small { min-height: 40px; padding: 0 18px; font-family: var(--mono); font-size: 13px; font-weight: 400; gap: 8px; }
 
 /* ---------- Hero (homepage) ---------- */
-.hero { margin-top: clamp(64px, 10vw, 120px); }
+.hero { margin-top: clamp(96px, 16vw, 220px); }
 .status { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 24px; margin-bottom: 28px; color: var(--muted); }
 .status span { display: flex; align-items: center; gap: 10px; }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--live); animation: pulse 2.4s ease-out infinite; }
 h1 {
-  margin: 0; font-size: clamp(56px, 10vw, 148px); font-weight: 500;
+  margin: 0; font-size: clamp(44px, 6.5vw, 96px); font-weight: 500;
   letter-spacing: -0.045em; line-height: 0.92;
 }
 h1 .period { color: var(--accent); }
@@ -88,7 +90,7 @@ h1 .period { color: var(--accent); }
 .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
 
 /* ---------- Index rows (homepage) ---------- */
-.index { margin-top: var(--section-gap); }
+.index { margin-top: clamp(120px, 18vw, 240px); }
 .index-label { color: var(--muted); font-size: 12px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px; }
 .rows { border-bottom: 1px solid var(--line); }
 .row {
@@ -108,8 +110,8 @@ h1 .period { color: var(--accent); }
 .row:hover .row-arrow, .row:focus-visible .row-arrow { color: var(--accent); transform: translateX(4px) rotate(0deg); }
 
 /* ---------- Subpages ---------- */
-.page-head { margin-top: clamp(64px, 10vw, 120px); }
-.page-title { font-size: clamp(48px, 7vw, 96px); line-height: 0.95; }
+.page-head { margin-top: clamp(96px, 16vw, 220px); }
+.page-title { font-size: clamp(40px, 5.5vw, 72px); line-height: 0.95; }
 .page-head .intro { margin-top: 24px; }
 
 .group { margin-top: var(--section-gap); }
