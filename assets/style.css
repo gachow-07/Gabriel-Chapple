@@ -15,17 +15,10 @@
   --gutter: clamp(20px, 5vw, 64px);
   --section-gap: clamp(72px, 10vw, 120px);
   --ease: cubic-bezier(.2, .7, .2, 1);
+  color-scheme: light;
 }
-/* Dark theme: pages set data-theme="light" on <html>, so this stays off.
-   Remove that attribute to follow the visitor's system setting again. */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0E0E0D; --ink: #EDEDEA; --muted: #9C9C96; --line: #2A2A28;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0E0E0D; --ink: #EDEDEA; --muted: #9C9C96; --line: #2A2A28;
-}
+/* The site is light only. Dark values, if you ever want them back:
+   --bg: #0E0E0D; --ink: #EDEDEA; --muted: #9C9C96; --line: #2A2A28; */
 
 /* ---------- Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
