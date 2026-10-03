@@ -63,18 +63,20 @@ a:focus-visible, button:focus-visible { outline: 2px solid currentColor; outline
 .pill--small { min-height: 40px; padding: 0 18px; font-family: var(--mono); font-size: 13px; font-weight: 400; gap: 8px; }
 
 /* ---------- Hero (homepage) ---------- */
-.hero { margin-top: clamp(96px, 16vw, 220px); }
-.status { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 24px; margin-bottom: 28px; color: var(--muted); }
+/* Hero spacing scales with screen height so the index rows fit on the
+   first screen without scrolling (vh = % of the window height). */
+.hero { margin-top: clamp(28px, 7vh, 160px); }
+.status { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 24px; margin-bottom: clamp(14px, 2.5vh, 28px); color: var(--muted); }
 .status span { display: flex; align-items: center; gap: 10px; }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--live); animation: pulse 2.4s ease-out infinite; }
 h1 {
-  margin: 0; font-size: clamp(44px, 6.5vw, 96px); font-weight: 500;
+  margin: 0; font-size: clamp(40px, min(6.5vw, 10vh), 96px); font-weight: 500;
   letter-spacing: -0.045em; line-height: 0.92;
 }
 h1 .period { color: var(--accent); }
 .intro {
-  margin: 32px 0 0; max-width: 640px;
-  font-size: clamp(19px, 2vw, 23px); line-height: 1.45; font-weight: 300; color: var(--muted);
+  margin: clamp(14px, 2.5vh, 32px) 0 0; max-width: 760px;
+  font-size: clamp(17px, min(2vw, 2.8vh), 23px); line-height: 1.45; font-weight: 300; color: var(--muted);
 }
 .cursor {
   display: inline-block; width: 0.5em; height: 1.05em; margin-left: 6px; vertical-align: -0.15em;
@@ -82,19 +84,19 @@ h1 .period { color: var(--accent); }
   /* Blinks 4 times (about 4.4s), then fades out and stays hidden */
   animation: blink 1.1s steps(1) 4, cursor-out 400ms ease 4.4s forwards;
 }
-.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: clamp(18px, 3vh, 36px); }
 
 /* ---------- Index rows (homepage) ---------- */
-.index { margin-top: clamp(120px, 18vw, 240px); }
+.index { margin-top: clamp(32px, 7vh, 160px); }
 .index-label { color: var(--muted); font-size: 12px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px; }
 .rows { border-bottom: 1px solid var(--line); }
 .row {
   display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 32px;
-  padding: 26px 0; border-top: 1px solid var(--line); min-height: 44px;
+  padding: clamp(10px, 1.7vh, 26px) 0; border-top: 1px solid var(--line); min-height: 44px;
 }
 .row-num { width: 32px; color: var(--muted); transition: color 200ms ease; }
 .row-title {
-  flex: 1 1 260px; font-size: clamp(32px, 4vw, 48px); font-weight: 500; letter-spacing: -0.03em;
+  flex: 1 1 260px; font-size: clamp(24px, min(4vw, 5vh), 48px); font-weight: 500; letter-spacing: -0.03em; line-height: 1.1;
   transition: transform 280ms var(--ease);
 }
 .row-desc { flex: 2 1 280px; font-size: 16px; line-height: 1.5; color: var(--muted); }
@@ -103,6 +105,20 @@ h1 .period { color: var(--accent); }
 .row:hover .row-title, .row:focus-visible .row-title { transform: translateX(14px); }
 .row:hover .row-num, .row:focus-visible .row-num { color: var(--accent); }
 .row:hover .row-arrow, .row:focus-visible .row-arrow { color: var(--accent); transform: translateX(4px) rotate(0deg); }
+/* Phones: one compact line per row (number, title, meta) so all four fit
+   on the first screen. Descriptions are on each page itself. */
+@media (max-width: 640px) {
+  .row { flex-wrap: nowrap; align-items: center; gap: 16px; padding: 10px 0; }
+  .row-num { width: auto; flex: none; }
+  .row-title { flex: 1 1 auto; font-size: 26px; }
+  .row-desc { display: none; }
+  .row-meta { flex: none; }
+  /* The index rows are the page links on the homepage, so the top bar
+     keeps only Contact and Resume there and stays one line tall. */
+  .home .nav a.navlink:not([href="#contact"]) { display: none; }
+  .hero { margin-top: clamp(20px, 4.5vh, 48px); }
+  .index { margin-top: clamp(24px, 4.5vh, 48px); }
+}
 
 /* ---------- Subpages ---------- */
 .page-head { margin-top: clamp(96px, 16vw, 220px); }
