@@ -122,11 +122,24 @@ h1 .period { color: var(--accent); }
   padding: 32px 0; border-top: 1px solid var(--line);
 }
 .entry-head { flex: 1 1 260px; }
-/* Logo or photo tile above an entry title (images live in assets/img/) */
+/* Logo to the left of an entry title (images live in assets/img/).
+   Shown in grayscale and blended into the background; color returns on hover. */
+.entry--thumb { align-items: flex-start; }
+.entry--thumb .row-num { padding-top: 10px; }
+.entry--thumb .entry-head { display: flex; align-items: flex-start; gap: 20px; }
 .entry-thumb {
-  display: block; width: 64px; height: 64px; margin-bottom: 20px;
-  border: 1px solid var(--line); border-radius: 12px;
-  background: #FFFFFF; object-fit: cover;
+  flex: none; display: block; width: 88px; height: 56px;
+  object-fit: contain; object-position: left center;
+  mix-blend-mode: multiply; filter: grayscale(1); opacity: .8;
+  transition: filter 280ms var(--ease), opacity 280ms var(--ease);
+}
+.entry:hover .entry-thumb { filter: none; opacity: 1; }
+/* Phones: logo sits above the title, and empty logo slots disappear */
+@media (max-width: 640px) {
+  .entry--thumb .entry-head { flex-direction: column; gap: 16px; }
+  .entry--thumb .row-num { padding-top: 0; }
+  span.entry-thumb { display: none; }
+  .entry-thumb { height: 40px; }
 }
 .entry-title {
   margin: 0; font-size: clamp(24px, 2.6vw, 32px); font-weight: 500;
@@ -170,6 +183,6 @@ footer { margin-top: var(--section-gap); color: var(--muted); }
 }
 @media (prefers-reduced-motion: reduce) {
   .cursor, .dot { animation: none; }
-  .row-title, .row-arrow, .row-num, .nav a.navlink, .footer-links a { transition: none; }
+  .row-title, .row-arrow, .row-num, .nav a.navlink, .footer-links a, .entry-thumb { transition: none; }
   html { scroll-behavior: auto; }
 }
