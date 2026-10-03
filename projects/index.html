@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Projects | Gabe Chapple</title>
+<meta name="description" content="Things Gabe Chapple has built, starting with this personal site.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<!-- Top bar: same on every page. Add a nav link here and on each page. -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand mono" href="../">[yourname].com</a>
+    <nav class="nav" aria-label="Main">
+      <a class="navlink" href="../about/">About</a>
+      <a class="navlink" href="../campus/">Campus</a>
+      <a class="navlink" href="../projects/" aria-current="page">Projects</a>
+      <a class="navlink" href="../work/">Work</a>
+      <a class="navlink" href="#contact">Contact</a>
+      <a class="pill pill--solid pill--small" href="../resume.pdf">Resume
+        <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4v10M5 10l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="top" class="page-head">
+    <h1 class="page-title">Projects<span class="period">.</span></h1>
+    <p class="intro">Things I've built, starting with this site.</p>
+  </section>
+
+  <section class="group">
+    <h2 class="index-label mono">Builds</h2>
+    <div class="rows">
+  <article class="entry">
+    <span class="row-num mono">01</span>
+    <div class="entry-head">
+      <h3 class="entry-title">This website</h3>
+      <p class="entry-org">Personal site</p>
+      <p class="entry-meta mono">2026</p>
+    </div>
+    <dl class="entry-body">
+      <div><dt class="mono">Problem</dt><dd>I needed one place where employers could see who I am, my experience and my skills.</dd></div>
+      <div><dt class="mono">What I did</dt><dd>Wrote a one-page spec, then built and shipped the site with Claude in plain HTML, CSS and JavaScript on GitHub Pages.</dd></div>
+      <div><dt class="mono">Result</dt><dd>Live, with a page each for About, Campus, Projects and Work.</dd></div>
+      <div class="entry-links">
+        <a class="pill" href="../">Live site
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="pill" href="https://github.com/gachow-07/Gabriel-Chapple" target="_blank" rel="noopener">GitHub repo
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6 14L14 6M7 6h7v7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </dl>
+  </article>
+    </div>
+  </section>
+
+  <!-- Footer: same on every page. Add new prompts to the log as you iterate. -->
+  <footer id="contact" class="mono">
+    <div class="footer-top">
+      <div class="footer-links">
+        <a href="mailto:gabe.chapple@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/gabechapple" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/gachow-07" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <button class="log-btn" type="button" aria-expanded="false" aria-controls="log">how this was made</button>
+    </div>
+    <div id="log" class="log" hidden>
+      <div>// prompt log: the page, in the words that built it</div>
+      <div><span class="prompt">&gt;</span> <span class="text">set up a blank-slate personal website and deploy it with github pages</span></div>
+      <div><span class="prompt">&gt;</span> <span class="text">here is my resume, linkedin and photo. add the right content</span></div>
+      <div><span class="prompt">&gt;</span> <span class="text">make it feel smoother and more alive with tasteful animations</span></div>
+      <div><span class="prompt">&gt;</span> <span class="text">make it minimal, but with taste</span></div>
+      <div><span class="prompt">&gt;</span> <span class="text">one accent color. no gradients. let the type do the work</span></div>
+      <div><span class="prompt">&gt;</span> <span class="text">add a live clock so it feels alive</span></div>
+      <div><span class="prompt">&gt;</span> <span class="text">redo the whole landing page and ui from this reference. no photo</span></div>
+    </div>
+    <div class="footer-bottom">
+      <span>Designed &amp; vibe-coded by Gabe Chapple</span>
+      <span>v0.1 · last shipped Oct 3, 2026</span>
+    </div>
+  </footer>
+</main>
+
+<script src="../assets/main.js"></script>
+</body>
+</html>
