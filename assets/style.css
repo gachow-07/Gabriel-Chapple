@@ -123,17 +123,15 @@ h1 .period { color: var(--accent); }
 }
 .entry-head { flex: 1 1 260px; }
 /* Logo to the left of an entry title (images live in assets/img/).
-   Shown in grayscale and blended into the background; color returns on hover. */
+   Full color; multiply blends any white logo background into the page. */
 .entry--thumb { align-items: flex-start; }
 .entry--thumb .row-num { padding-top: 10px; }
 .entry--thumb .entry-head { display: flex; align-items: flex-start; gap: 20px; }
 .entry-thumb {
   flex: none; display: block; width: 88px; height: 56px;
   object-fit: contain; object-position: left center;
-  mix-blend-mode: multiply; filter: grayscale(1); opacity: .8;
-  transition: filter 280ms var(--ease), opacity 280ms var(--ease);
+  mix-blend-mode: multiply;
 }
-.entry:hover .entry-thumb { filter: none; opacity: 1; }
 /* Phones: logo sits above the title, and empty logo slots disappear */
 @media (max-width: 640px) {
   .entry--thumb .entry-head { flex-direction: column; gap: 16px; }
@@ -183,6 +181,6 @@ footer { margin-top: var(--section-gap); color: var(--muted); }
 }
 @media (prefers-reduced-motion: reduce) {
   .cursor, .dot { animation: none; }
-  .row-title, .row-arrow, .row-num, .nav a.navlink, .footer-links a, .entry-thumb { transition: none; }
+  .row-title, .row-arrow, .row-num, .nav a.navlink, .footer-links a { transition: none; }
   html { scroll-behavior: auto; }
 }
