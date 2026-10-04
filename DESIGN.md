@@ -67,7 +67,7 @@ Content sits in a centered container, `max-width: 1200px`, with side padding `cl
 
 **Index rows.** Each row is a full-width link: mono number, large title, muted description, mono meta with an arrow on the right. On hover or keyboard focus, the title slides right 14px, the number and arrow turn `--accent`, and the arrow rotates from -45° to 0° and nudges right 4px (280ms, `cubic-bezier(.2,.7,.2,1)`). Order: About, Campus, Projects, Work.
 
-**Footer.** Mono, muted. Email, LinkedIn, GitHub links on the left; a "how this was made" outline button on the right that toggles the prompt log. The prompt log is a bordered box (12px radius) listing the prompts used to build the site, each prefixed with an accent `>`. Bottom line: "Designed & vibe-coded by [Your Name]" and a version and last-shipped date.
+**Footer.** Mono, muted. Email, LinkedIn, GitHub links on the left; a "how this was made" outline button on the right that toggles the prompt log. The prompt log is a bordered box (12px radius) listing the prompts used to build the site, each prefixed with an accent `>`. Bottom line: "Designed & built by [Your Name]" and a version and last-shipped date.
 
 ## Motion
 
